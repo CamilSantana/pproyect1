@@ -13,11 +13,23 @@ public class Libro {
         this.disponible = disponible;
     }
 
+        public String getTitulo() {
+            return titulo;
+        }
+
         public boolean getDisponibilidad() {
             return disponible;
-    }
+        }
 
         public void setDisponibilidad(boolean disponible) {
             this.disponible = disponible;
+        }
+
+        public void consultarDisponibilidad() {
+            if (disponible) {
+                System.out.println(titulo + " esta disponible");
+            } else {
+                System.out.println(titulo + " no esta disponible");
+            }
     }
 }

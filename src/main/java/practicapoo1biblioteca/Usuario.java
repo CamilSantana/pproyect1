@@ -13,16 +13,20 @@ public class Usuario {
         this.librosPrestados = new ArrayList<>();
     }
 
+        public String getNombre() {
+            return nombre;
+        }
+
         public Prestamo prestarLibro(Libro libro) {
             if (libro.getDisponibilidad()) {
                 librosPrestados.add(libro);
                 libro.setDisponibilidad(false);
                 return new Prestamo(this, libro);
             } else {
-                System.out.println("El libro requerido no está disponible");
+                System.out.println("El libro requerido no esta disponible");
                 return null;
+            }
         }
-    }                                    
 
         public void devolverLibro(Libro libro) {
             if (librosPrestados.contains(libro)) {
@@ -33,4 +37,4 @@ public class Usuario {
                 System.out.println("Este usuario no tiene ese libro prestado");
             }
         }
-}                                       
+}                          
