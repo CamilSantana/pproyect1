@@ -12,7 +12,7 @@ public class Libro {
         this.isbn = isbn;
         this.disponible = disponible;
     }
-
+//metodos, hay que decir porque cada metodo?
         public String getTitulo() {
             return titulo;
         }

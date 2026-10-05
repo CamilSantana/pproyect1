@@ -5,7 +5,7 @@ public class Tv {
     int pulgadas;
     boolean encendido;
     int volumen;
-
+//metodos, creo que cada uno describe lo que hace
     public void encender() {
         encendido = true;
         dibujarTv(" La Tv se esta encendiendo... ", "");

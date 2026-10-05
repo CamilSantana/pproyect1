@@ -3,7 +3,7 @@ package practicapoo1telefonia;
 public class Cliente {
     private String nombre;
     private String numeroTelefonico;
-    private Plan plan;                 // un Cliente TIENE un Plan
+    private Plan plan;                 
 
     public Cliente(String nombre, String numeroTelefonico, Plan plan) {
         this.nombre = nombre;

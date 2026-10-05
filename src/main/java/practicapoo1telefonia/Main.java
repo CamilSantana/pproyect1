@@ -7,6 +7,7 @@ public class Main {
         Cliente cliente = new Cliente("Frost", "809-555-1234", plan);
 
         Factura factura = new Factura(cliente, 350, 6.5);
+   // llamando el metodo
         factura.generarFactura();
     }
 }

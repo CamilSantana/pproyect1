@@ -2,7 +2,7 @@ package practicapoo1vehiculos;
 
 public class Main {
     public static void main(String[] args) {
-
+// instancias
         Vehiculo v1 = new Vehiculo();                                  
         Vehiculo v2 = new Vehiculo("A123456");                         
         Vehiculo v3 = new Vehiculo("B654321", "Toyota", "Corolla");    

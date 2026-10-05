@@ -2,7 +2,7 @@ package asignacion2_1;
 
 public class Main {
     public static void main(String[] args) {
-
+// instancias
         Tv tv1 = new Tv();
         Tv tv2 = new Tv();
         Tv tv3 = new Tv();

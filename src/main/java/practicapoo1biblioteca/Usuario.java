@@ -12,7 +12,7 @@ public class Usuario {
         this.id = id;
         this.librosPrestados = new ArrayList<>();
     }
-
+// y metodos
         public String getNombre() {
             return nombre;
         }

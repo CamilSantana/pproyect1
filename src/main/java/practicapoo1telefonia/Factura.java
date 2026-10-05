@@ -4,11 +4,11 @@ public class Factura {
     private static final double COSTO_MINUTO_EXTRA = 2.50;
     private static final double COSTO_GB_EXTRA = 100.0;
 
-    private Cliente cliente;           // la Factura USA al Cliente (y, por él, a su Plan)
+    private Cliente cliente;           
     private int minutosUsados;
     private double datosUsadosGB;
     private double cargosExtras;
-
+//la factura usa al cliente y por el, a su Plan)
     public Factura(Cliente cliente, int minutosUsados, double datosUsadosGB) {
         this.cliente = cliente;
         this.minutosUsados = minutosUsados;

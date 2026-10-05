@@ -22,7 +22,7 @@ public class Vehiculo {
         this.marca = "Desconocida";
         this.modelo = "Desconocido";
     }
-
+// sobrecarga de metodos para los planes de los vehiculos
         public double calcularMantenimiento(int km) {
             return 1000 + (km * 0.5);
         }
@@ -35,24 +35,24 @@ public class Vehiculo {
             } else if (tipoServicio.equalsIgnoreCase("premium")) {
                 return base * 2;
             } else {
-                return base;    // "basico" o cualquier otro
+                return base;    
         }
     }
 
-    // Sobrecarga 3: kilómetros + tipo de servicio + años del vehículo
-    public double calcularMantenimiento(int km, String tipoServicio, int anios) {
-        return calcularMantenimiento(km, tipoServicio) + (anios * 200);
-    }
+    
+            public double calcularMantenimiento(int km, String tipoServicio, int anios) {
+                return calcularMantenimiento(km, tipoServicio) + (anios * 200);
+            }
 
-    public String getPlaca() {
-        return placa;
-    }
+            public String getPlaca() {
+                return placa;
+            }
 
-    public String getMarca() {
-        return marca;
-    }
+            public String getMarca() {
+                return marca;
+            }
 
-    public String getModelo() {
-        return modelo;
-    }
+            public String getModelo() {
+                return modelo;
+            }
 }

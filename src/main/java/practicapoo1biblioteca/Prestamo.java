@@ -12,7 +12,7 @@ public class Prestamo {
         this.usuario = usuario;
         this.libro = libro;
     }
-
+//metodos
         public LocalDate getFecha() {
             return fecha;
         }
