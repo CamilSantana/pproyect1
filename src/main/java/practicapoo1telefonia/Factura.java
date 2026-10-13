@@ -1,8 +1,8 @@
 package practicapoo1telefonia;
 
 public class Factura {
-    private static final double COSTO_MINUTO_EXTRA = 2.50;
-    private static final double COSTO_GB_EXTRA = 100.0;
+    private static final double costoMinutoExtra = 2.50;
+    private static final double costoGbExtra = 100.0;
 
     private Cliente cliente;           
     private int minutosUsados;
@@ -16,40 +16,40 @@ public class Factura {
         this.cargosExtras = calcularCargosExtras();
     }
 
-    public double calcularCargosExtras() {
-        Plan plan = cliente.getPlan();
-        double extra = 0;
+        public double calcularCargosExtras() {
+            Plan plan = cliente.getPlan();
+            double extra = 0;
 
-        if (minutosUsados > plan.getMinutosIncluidos()) {
-            int minutosExceso = minutosUsados - plan.getMinutosIncluidos();
-            extra += minutosExceso * COSTO_MINUTO_EXTRA;
+            if (minutosUsados > plan.getMinutosIncluidos()) {
+                int minutosExceso = minutosUsados - plan.getMinutosIncluidos();
+                extra += minutosExceso * costoMinutoExtra;
+            }
+
+            if (datosUsadosGB > plan.getDatosGB()) {
+                double datosExceso = datosUsadosGB - plan.getDatosGB();
+                extra += datosExceso * costoGbExtra;
+            }
+
+            return extra;
         }
 
-        if (datosUsadosGB > plan.getDatosGB()) {
-            double datosExceso = datosUsadosGB - plan.getDatosGB();
-            extra += datosExceso * COSTO_GB_EXTRA;
+        public double calcularTotal() {
+            return cliente.getPlan().getPrecioMensual() + cargosExtras;
         }
 
-        return extra;
-    }
+        public void generarFactura() {
+            Plan plan = cliente.getPlan();
 
-    public double calcularTotal() {
-        return cliente.getPlan().getPrecioMensual() + cargosExtras;
-    }
-
-    public void generarFactura() {
-        Plan plan = cliente.getPlan();
-
-        System.out.println("========== FACTURA ==========");
-        System.out.println("Cliente: " + cliente.getNombre());
-        System.out.println("Telefono: " + cliente.getNumeroTelefonico());
-        System.out.println("-----------------------------");
-        System.out.println("Minutos: " + minutosUsados + " usados de " + plan.getMinutosIncluidos());
-        System.out.println("Datos: " + datosUsadosGB + " GB usados de " + plan.getDatosGB() + " GB");
-        System.out.println("-----------------------------");
-        System.out.printf("Precio del plan: %.2f%n", plan.getPrecioMensual());
-        System.out.printf("Cargos por exceso: %.2f%n", cargosExtras);
-        System.out.printf("TOTAL A PAGAR: %.2f%n", calcularTotal());
-        System.out.println("=============================");
-    }
+            System.out.println("========== FACTURA ==========");
+            System.out.println("Cliente: " + cliente.getNombre());
+            System.out.println("Telefono: " + cliente.getNumeroTelefonico());
+            System.out.println("-----------------------------");
+            System.out.println("Minutos: " + minutosUsados + " usados de " + plan.getMinutosIncluidos());
+            System.out.println("Datos: " + datosUsadosGB + " GB usados de " + plan.getDatosGB() + " GB");
+            System.out.println("-----------------------------");
+            System.out.printf("Precio del plan: %.2f%n", plan.getPrecioMensual());
+            System.out.printf("Cargos por exceso: %.2f%n", cargosExtras);
+            System.out.printf("TOTAL A PAGAR: %.2f%n", calcularTotal());
+            System.out.println("=============================");
+        }
 }

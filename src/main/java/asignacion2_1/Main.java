@@ -7,21 +7,20 @@ public class Main {
         Tv tv2 = new Tv();
         Tv tv3 = new Tv();
 
-        tv1.marca = " Samsung ";
-        tv1.pulgadas = 55;
-        tv1.volumen = 20;
+        tv1.setMarca("Samsung");
+        tv1.setPulgadas(55);
+        tv1.setVolumen(20);
 
-        tv2.marca = " LG ";
-        tv2.pulgadas = 43;
-        tv2.volumen = 15;
+        tv2.setMarca("LG");
+        tv2.setPulgadas(43);
+        tv2.setVolumen(15);
 
-        tv3.marca = " Sony ";
-        tv3.pulgadas = 65;
-        tv3.volumen = 30;
+        tv3.setMarca("Sony");
+        tv3.setPulgadas(65);
+        tv3.setVolumen(30);
 
-       
         System.out.println("  ======================================");
-        System.out.println("   Tv 1 - " + tv1.marca + " " + tv1.pulgadas + "\"");
+        System.out.println("   Tv 1 - " + tv1.getMarca() + " " + tv1.getPulgadas() + "\"");
         System.out.println("  ======================================");
         tv1.encender();
         tv1.subirVolumen();
@@ -30,7 +29,7 @@ public class Main {
         System.out.println();
 
         System.out.println("  ======================================");
-        System.out.println("   TV 2 - " + tv2.marca + " " + tv2.pulgadas + "\"");
+        System.out.println("   TV 2 - " + tv2.getMarca() + " " + tv2.getPulgadas() + "\"");
         System.out.println("  ======================================");
         tv2.encender();
         tv2.subirVolumen();
@@ -39,7 +38,7 @@ public class Main {
         System.out.println();
 
         System.out.println("  ======================================");
-        System.out.println("   TV 3 - " + tv3.marca + " " + tv3.pulgadas + "\"");
+        System.out.println("   TV 3 - " + tv3.getMarca() + " " + tv3.getPulgadas() + "\"");
         System.out.println("  ======================================");
         tv3.encender();
         tv3.subirVolumen();

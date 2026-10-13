@@ -11,15 +11,15 @@ public class Plan {
         this.precioMensual = precioMensual;
     }
 
-    public int getMinutosIncluidos() {
-        return minutosIncluidos;
-    }
+        public int getMinutosIncluidos() {
+            return minutosIncluidos;
+        }
 
-    public double getDatosGB() {
-        return datosGB;
-    }
+        public double getDatosGB() {
+            return datosGB;
+        }
 
-    public double getPrecioMensual() {
-        return precioMensual;
-    }
+        public double getPrecioMensual() {
+            return precioMensual;
+        }
 }

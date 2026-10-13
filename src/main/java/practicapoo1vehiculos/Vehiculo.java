@@ -18,7 +18,7 @@ public class Vehiculo {
     }
 
     public Vehiculo() {
-        this.placa = "SIN-PLACA";
+        this.placa = "Sin placa";
         this.marca = "Desconocida";
         this.modelo = "Desconocido";
     }

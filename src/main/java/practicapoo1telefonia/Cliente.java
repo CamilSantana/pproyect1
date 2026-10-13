@@ -11,15 +11,15 @@ public class Cliente {
         this.plan = plan;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+        public String getNombre() {
+            return nombre;
+        }
 
-    public String getNumeroTelefonico() {
-        return numeroTelefonico;
-    }
+        public String getNumeroTelefonico() {
+            return numeroTelefonico;
+        }
 
-    public Plan getPlan() {
-        return plan;
-    }
+        public Plan getPlan() {
+            return plan;
+        }
 }
